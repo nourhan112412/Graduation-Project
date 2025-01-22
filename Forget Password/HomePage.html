@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Homepage</title>
+</head>
+<body>  
+  <header>
+    <!-- Logo and Text Container -->
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Faculty logo" class="my-image" id="img">
+        <div class="logo">BIS System</div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Container Added Here -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search..." />
+        <button onclick="searchFunction()">Search</button>
+    </div>
+
+  </header>
+
+  <section class="hero" id="home">
+      <h1>Welcome To BIS System !</h1>
+      <p id="intro">Your Success Starts Today !</p>
+      <a href="admin.html" class="cta-button">Get Started</a>
+  </section>
+  <section class="features" id="features">
+    <h1>Features &rarr;</h1>
+    <div class="feature-container">
+      <div class="feature-card">
+        <div class="feature-image">Feature Image</div>
+        <div class="feature-description">
+          <h3>Rooms Management System<br>(RMS)</h3>
+          <p>Scheduling Rooms/Labs</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image">Feature Image</div>
+        <div class="feature-description">
+          <h3>Examination Halls<br>(EX-Halls)</h3>
+          <p>Scheduling Halls</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image">Feature Image</div>
+        <div class="feature-description">
+          <h3>Instructor Viewer<br>(IV)</h3>
+          <p>Display Schedules To Doctor/Teaching Assistant</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+      <p id="footer">&copy; 2024/2025 BIS System All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
