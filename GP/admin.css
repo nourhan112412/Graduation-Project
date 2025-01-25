@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+h1{
+  text-align: center;
+  color: #032d50;
+  margin-top: 10px;
+}
+
+/*header*/
+header {
+  background: #032d50;
+  color:#f4f4f4;
+  padding-top: 5px;
+  padding-right: 0px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Search Bar Container */
+.search-container {
+  margin-left: 20px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 40px; /* Start with just the icon width */
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+/* Style for the Search Icon */
+.search-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #f4f4f4;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.4s ease;
+}
+
+/* Style for the Search Input */
+.search-input {
+  width: 0; /* Hidden initially */
+  padding: 0 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent; /* Set input field background to white */
+  color: transparent; /* Start with text hidden */
+  transition: width 0.4s ease, color 0.4s ease;
+}
+
+/* When the container is expanded (open class added) */
+.search-container.open {
+  width: 300px; /* Expanded container width */
+}
+
+.search-container.open .search-input {
+  width: 250px; /* Expanded input width */
+  color: #f4f4f4; /* Reveal text */
+}
+
+.search-container.open .search-icon {
+  transform: translateX(220px); /* Move the search icon to the right */
+}
+
+nav ul {
+  text-align: right;
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 10px;
+  color:#f4f4f4;
+  text-decoration: none;
+}
+
+ul li ul.dropdown li{
+  display: block;
+}
+
+ul li ul.dropdown{
+  width: 100%;
+  background-color: #032d50;
+  position:absolute;
+  display: none;
+}
+
+ul li a:hover{
+  background: #032d50;
+  color: #f4f4f4;
+}
+
+ul li:hover .dropdown{
+  display: block;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  background-color:#f4f4f4;  /* Changes the background to white on hover */
+  color: #032d50;
+    /* Changes the text color to blue */
+}
+
+/*Side Bar*/
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.profile-info h3 {
+  color: #f4f4f4;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  text-align: center;
+  color:#f4f4f4;
+  font-size: 14px;
+  margin: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #032d50;
+  color: rgb(211, 208, 255);
+  position: absolute;
+  left: -250px; /* Start off-screen */
+  transition: left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f4f4f4;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul a{
+  padding-left: 30px;
+  transition: .5s;
+}
+
+.sidebar ul li:hover a{
+  padding-left: 50px;
+}
+
+.sidebar ul a i{
+  margin-left: 16px;
+}
+
+.sidebar nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 10px 10px;
+  color:#f4f4f4;
+  text-decoration: none;
+}
+
+
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease; /* Smooth transition for main content */
+  padding: 20px;
+  height: 100%;
+}
+
+#toggleButton{
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: #f4f4f4;
+  border: none;
+}
+
+#toggleButton:hover {
+  background-color: #307c35;
+}
+
+.sidebar.open {
+  left: 0; /* Move the sidebar into view */
+}
+
+.main-content.shifted {
+  margin-left: 250px; /* Move the content to the left when the sidebar is open */
+}
+
+/* Logout container (centering the button) */
+.logout-container {
+  align-items: center;
+  text-align: center;
+  margin-top: 20px; 
+}
+
+/* Logout button styling */
+.logout-btn {
+  background-color: #4CAF50; 
+  color: #f4f4f4; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #307c35; /* Darker red on hover */
+}
+
+
+
+/*main*/
+#homebutton {
+  position: fixed;
+  right: 20px; 
+  bottom: 20px;  
+  background-color: #4CAF50; 
+  color:#f4f4f4;              
+  border: none;              
+  padding: 10px 20px;      
+  text-align: center;        
+  text-decoration: none;    
+  display: inline-flex;        
+  font-size: 16px;           
+  cursor: pointer;          
+  border-radius: 30px;        
+}
+
+#homebutton i {
+  margin-right: 8px;
+}
+
+#homebutton:hover {
+  background-color:#307c35; 
+}
+
+/* Container for the and operation sections */
+.operations {
+  margin: 20px;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the checkmark icon (we will use a circle background for checkmarks) */
+.checkmark {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Styling for the operations section */
+.operations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Style for each operation group */
+.operation-group {
+  width: 22%;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for each operation group */
+.operation-group h2 {
+  font-size: 20px;
+  color: #464040;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+}
+
+.operation-group h3 {
+  font-size: 20px;
+  color: #464040;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+}
+
+/* List styling inside operation groups */
+.operation-group ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.operation-group ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.operation-group ul li a{
+  text-decoration: none;
+  color: #555;
+}
+
+.operation-group ul li a:hover{
+  color: #383838;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .operation-group {
+    width: 45%; /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .operation-group {
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background: #032d50;
+  color: #f4f4f4;
+  position: absolute;
+  margin-top: 150px;
+  margin-bottom: 0;
+  width: 100%;
+}

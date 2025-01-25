@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Create Account</title>
+</head>
+<body>
+  <img src="logo.jpg" alt="faculty logo" class="my-image">
+    <form action="" method="post" onsubmit="return false;" novalidate>
+        <fieldset>
+            <legend>Create Account</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" maxlength="10" minlength="6" required>
+
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Re-Enter Your Password" maxlength="10" minlength="6" required>          
+            <p class="bold-paragraph">Please Specify Your Role!</p>
+            <div class="role-container">
+                <input type="radio" name="Role" id="Staff" value="Staff" checked>
+                <label for="Staff">Staff</label>
+                <input type="radio" name="Role" id="Administration" value="Administration">
+                <label for="Administration">Administration</label>
+                <input type="radio" name="Role" id="Instructor" value="Instructor">
+                <label for="Instructor">Instructor</label>
+            </div>
+            <br>
+            <button id="signup-button">Sign Up</button>
+      <br>
+      <br>
+      <div style="text-align: center;"
+        <p>Already Have an Account ? <a href="signin.html">Sign In Here!</a></p>
+      </fieldset>
+    </form>
+    <footer>
+      <p>&copy; 2024/2025 BIS System All Rights Reserved.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

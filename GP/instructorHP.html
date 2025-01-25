@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor HomePage</title>
+    <link rel="stylesheet" href="instructorHP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<header>
+  <div class="search-container">
+    <button class="search-icon" id="search-icon">
+      <i class="fas fa-search"></i>
+    </button>
+    <input type="text" id="search-input" class="search-input" placeholder="Search...">
+  </div>
+          <nav>
+            <ul>
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="#Schedules">Schedules &#x25BE;</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Level 1</a></li>
+                    <li><a href="#">Level 2</a></li>
+                    <li><a href="#">Level 3</a></li>
+                    <li><a href="#">Level 4</a></li>
+                  </ul>
+                  </li>
+  </ul>
+  </header>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+          <div class="profile">
+            <img src="logo.jpg" alt="Profile Photo" class="profile-photo">
+            <div class="profile-info">
+              <h4>Ahmed56</h4>
+              <h4>Instructor</h4>
+              <br>
+            </div>
+            </div>
+        <ul>
+          <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+          <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+          <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+          <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+          <li><a href="#"><i class="material-icons"></i>Contact</a></li>
+
+   <!-- Logout Button with Icon -->
+   <div class="logout-container">
+    <button class="logout-btn" id="logout-btn">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
+</div>
+</div>
+   </ul>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <button id="toggleButton">&#9776;</button>
+            
+    <!--main-->
+<h1>Welcome To Instructor HomePage!</h1>
+<div class="operations">
+  <div class="operation-group">
+    <h3>Level 1</h3>
+    <ul>
+      <li><span class="checkmark"></span>_______</li>
+      <li><span class="checkmark"></span>_______</li>
+    </ul>
+  </div>
+
+  <div class="operation-group">
+    <h3>Level 2</h3>
+    <ul>
+      <li><span class="checkmark"></span>_______</li>
+      <li><span class="checkmark"></span>_______</li>
+    </ul>
+  </div>
+
+  <div class="operation-group">
+    <h3>Level 3</h3>
+    <ul>
+      <li><span class="checkmark"></span>_______</li>
+      <li><span class="checkmark"></span>_______</li>
+    </ul>
+  </div>
+
+  <div class="operation-group">
+    <h3>Level 4</h3>
+    <ul>
+      <li><span class="checkmark"></span>_______</li>
+      <li><span class="checkmark"></span>_______</li>
+    </ul>
+  </div>
+</div>
+
+<button id="homebutton" onclick="window.location.href='/HomePage.html'">
+  <i class="fas fa-home"></i> Go to Homepage
+</button>
+        </div>
+    </div>
+    <footer>
+      <p>&copy; 2024/2025 BIS System All Rights Reserved.</p>
+  </footer>
+    <script src="admin.js"></script>
+</body>
+</html>

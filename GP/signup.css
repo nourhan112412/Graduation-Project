@@ -1,0 +1,95 @@
+/* SignUp CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  height: 120vh;
+  background-image: url(image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  margin-top: -70px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  padding-right: 30px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.role-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+.role-container input[type="radio"] {
+  margin-right:12px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+#signup-button:hover {
+  background-color: #3c9740;
+}
+fieldset {
+  border: none;
+}
+legend {
+  font-size: 2em; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+  margin-left: 65px;
+  color: #4CAF50;
+}
+.my-image {
+  width: 10%; 
+  height: auto; 
+  border-radius: 100px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.bold-paragraph {
+  font-weight: bold; 
+}
+footer {
+  text-align: center;
+  color: white;
+}
+
+a{
+ color:black;
+  text-decoration: none; 
+}
+a:hover{
+  color: darkgreen;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

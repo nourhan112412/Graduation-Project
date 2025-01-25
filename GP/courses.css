@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #032d50;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+  background-color: #032d50;
+}
+
+/* Logo styling */
+.logo-container {
+  top: 20px;
+  left: 5%; 
+  margin-bottom: -5px;
+}
+
+.my-image {
+  width: 50px;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  margin-bottom: 5px;
+}
+
+/* Nav items container (links) */
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+/* Styling for the nav links */
+.nav-items a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.nav-items a:hover{
+  background-color: #f4f4f4;
+  color: #032d50;
+}
+
+nav-items a:active,
+nav-items a:focus{
+  background-color: #f4f4f4;
+  color: #032d50;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #032d50;
+}
+
+/* Form styles */
+form {
+  display:grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="number"], input[type="text"] {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #f4f4f4;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #5e5e5e;
+  color: #f4f4f4;
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+button {
+  background-color: #45a049;
+  color: #f4f4f4;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2f7032;
+}
+
+#edit{
+  background-color: #4CAF50;
+}
+
+#edit:hover{
+  background-color: #2f7032;
+}
+
+#delete{
+  background-color: #ce1d1d;
+}
+
+#delete:hover{
+  background-color: #991616;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  table th, table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
